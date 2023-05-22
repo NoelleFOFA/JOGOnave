@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Inimigos : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float velocidadeInimigo;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        MovimentoInimigo();
+    }
+    private void MovimentoInimigo()
+    {
+        transform.Translate(Vector3.up * velocidadeInimigo * Time.deltaTime);
     }
 }
